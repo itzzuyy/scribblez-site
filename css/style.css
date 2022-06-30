@@ -1,0 +1,176 @@
+/* FONTS */
+
+@import url("https://fonts.googleapis.com/css2?family=Dekko&display=swap, https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+
+/* GLOBAL STYLES */
+
+:root {
+  --font-primary: 'Dekko', sans-serif;
+  --font-secondary: 'Nanum Pen Script', cursive;
+  --font-code: 'Roboto', monospace;
+  --bg-color: #ffffff;
+  --font-color: #000000;
+  --btn-bg-color: #000000;
+  --accent-color: #ffffff;
+  --accent-color-button: #6a6a6a;
+  --header-shadow: #000 0px 0px 5px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+  color: var(--font-color);
+  font-family: var(--font-primary);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  align-items: center;
+}
+
+.banner {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  min-width: 350px;
+}
+
+.scribblez_gallery {
+  width: 100%;
+}
+
+.scribblez_grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+
+}
+
+.scribblez_item img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* HEADER */
+
+header {
+  box-shadow: var(--header-shadow);
+}
+
+header .container {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* BUTTONS */
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--btn-bg-color);
+  color: var(--accent-color);
+  font-family: var(--font-primary);
+  font-style: italic;
+  font-weight: bold;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+  box-shadow: 4px 4px 0 0 var(--accent-color-button);
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  outline: none;
+}
+.btn:hover {
+  box-shadow: none;
+}
+
+.wallet-btn {
+  border-radius: 3rem;
+  border-color: transparent;
+  height:50px;
+  line-height: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-btn {
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 1.1rem 1.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+/* CONTENT SECTION */
+
+section {
+  flex: 1 1 auto;
+  align-items: center;
+}
+
+.main_content {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  
+}
+
+.main_content p {
+  font-size: 1.1rem;
+  font-family: var(--font-primary);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.ether {
+  font-family: var(--font-secondary)
+}
+
+/* OWNER STYLES */
+
+.owner-status {
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+  .menu {
+    gap: 1rem;
+  }
+  .wallet-btn {
+    margin-left: 0;
+    display: inline-block;
+    padding: 1rem;
+    max-width: 8rem;
+    font-size: 0.9rem;
+  }
+  .scribblez_grid {
+    grid-template-columns: repeat(2,1fr)
+  }
+}
+
+ 
