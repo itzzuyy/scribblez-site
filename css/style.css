@@ -44,7 +44,7 @@ body {
 .banner {
   display: block;
   margin: 0 auto;
-  width: 70%;
+  width: 100%;
   min-width: 350px;
 }
 
@@ -55,7 +55,7 @@ body {
 .scribblez_grid {
   display: grid;
   grid-template-columns: repeat(4,1fr);
-
+  margin-top: -80px;
 }
 
 .scribblez_item img {
